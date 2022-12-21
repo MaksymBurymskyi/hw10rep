@@ -1,0 +1,308 @@
+:root {
+    --blue-color: #46b1de;
+    --white-color: #fff;
+    --dark-text: #0f2c4b;
+}
+@font-face {
+    font-family: "Muller";
+    font-display: swap;
+    src: url("../fonts/MullerBold.woff2") format("woff2"),
+        url("../fonts/MullerBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Muller";
+    font-display: swap;
+    src: url("../fonts/MullerRegular.woff2") format("woff2"),
+        url("../fonts/MullerRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Muller", "Times New Roman", Times, serif;
+    font-weight: normal;
+    color: black;
+    position: relative;
+}
+header,
+header > div,
+header > div > div,
+.card-item {
+    display: flex;
+}
+header {
+    height: 60px;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+header > div {
+    justify-content: space-between;
+}
+ul,
+.wrapper-cards {
+    display: grid;
+}
+ul {
+    grid-template-columns: 84px 61px 63px;
+    gap: 30px;
+}
+header > div,
+.main-section,
+.wrapper-cards,
+.approve-wrap {
+    width: 1150px;
+}
+header > div {
+    align-items: flex-end;
+}
+header > div > div {
+    font-size: 26px;
+    color: var(--blue-color);
+}
+img[alt="logo tooth"] {
+    height: 52px;
+    margin-right: 6px;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a,
+header div a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+.main-section {
+    margin: 200px auto 0;
+}
+.first-screen {
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/lady.png), url(../img/background.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 640px, cover;
+    background-position-y: bottom, top;
+    background-position-x: calc(50% + 450px), center;
+    padding-top: 60px;
+}
+h1,
+h2,
+h3 {
+    font-family: "Russo One", sans-serif;
+}
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+h1 > span {
+    color: var(--blue-color);
+}
+.main-text {
+    padding-top: 5px;
+    width: 500px;
+    font-size: large;
+}
+.btn {
+    margin: 40px 50px;
+    width: 125px;
+    padding: 16px 0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background: var(--blue-color);
+    color: var(--white-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+}
+.btn:hover {
+    background: var(--white-color);
+    color: var(--blue-color);
+}
+.wrapper-cards {
+    margin: 220px 0;
+    grid-template-columns: 280px 280px 280px;
+    justify-content: center;
+    gap: 50px;
+}
+.card-item {
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 280px;
+    height: 90px;
+    border: rgba(0, 0, 0, 0.8) solid 1px;
+    background: var(--white-color);
+    padding: 5px;
+}
+.card-item span {
+    color: var(--blue-color);
+    font-size: 65px;
+    font-weight: bold;
+}
+.approve {
+    margin-top: 100px;
+}
+.approve-wrap {
+    margin: 0 auto;
+}
+.approve h2 {
+    text-transform: uppercase;
+    font-size: 34px;
+    text-align: center;
+}
+.approve h2 > span,
+.appr-item-1,
+.appr-item-2 {
+    color: var(--blue-color);
+}
+.approve h2 + p {
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+}
+.approve-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 1015px;
+    height: 320px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--blue-color);
+    border-radius: 10px;
+    margin: 50px auto;
+}
+.approve-item {
+    display: flex;
+    width: 300px;
+    height: 130px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+.appr-item-1 {
+    font-size: 48px;
+    line-height: 48px;
+}
+.appr-item-1,
+.appr-item-2 {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-weight: bold;
+}
+.appr-item-2 {
+    text-transform: uppercase;
+}
+.appr-item-1,
+.appr-item-2,
+.appr-item-3 {
+    padding: 0 10px;
+}
+footer {
+    background: rgb(119, 174, 194);
+    background: linear-gradient(
+        90deg,
+        rgba(161, 199, 212, 1) 0%,
+        rgba(48, 131, 162, 1) 100%
+    );
+}
+.footer-box {
+    display: grid;
+    width: 1150px;
+    height: 300px;
+    grid-template-columns: repeat(10, 10%);
+    margin: 0 auto;
+}
+.about-servis {
+    grid-column: 2/ 5;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 45% 55%;
+}
+.logo {
+    display: flex;
+    grid-column: 1/ 3;
+    grid-row: 1/1;
+    align-items: center;
+}
+.about-servis > div > div {
+    font-size: 26px;
+    color: var(--dark-text);
+}
+.about-servis > div.logo + div {
+    padding-top: 20px;
+    line-height: 30px;
+    grid-row: 2/3;
+}
+.about-servis a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+.about-servis > div > button {
+    text-transform: uppercase;
+    padding: 10px 5px;
+    background: none;
+    border: currentColor;
+}
+button#uk {
+    font-weight: bolder;
+}
+.about-servis > div.logo + div + div {
+    line-height: 18px;
+    grid-row: 2/3;
+    align-self: center;
+}
+.about-servis > div.logo + div + div > span {
+    font-weight: bolder;
+}
+.contacts {
+    grid-column: 8 / span 2;
+    margin-top: 40px;
+    color: var(--white-color);
+}
+.contacts > p,
+.contacts > div {
+    height: 30px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.contacts > p > span {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.contacts address {
+    font-style: unset;
+}
+.contacts a {
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contacts img {
+    width: 16px;
+    height: 16px;
+}
+img[alt="whatsapp link"],
+img[alt="email link"] {
+    width: 20px;
+    height: 20px;
+}
+.contacts > div + div + div + div + div + div {
+    justify-content: end;
+    font-size: smaller;
+}
